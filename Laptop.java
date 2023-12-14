@@ -6,7 +6,6 @@ public class Laptop {
     private String operatingSystem;
     private String color;
 
-    // Constructor
     public Laptop(String model, int ramSize, int storageSize, String operatingSystem, String color) {
         this.model = model;
         this.ramSize = ramSize;
@@ -14,8 +13,6 @@ public class Laptop {
         this.operatingSystem = operatingSystem;
         this.color = color;
     }
-
-    // Getters
 
     public String getModel() {
         return model;

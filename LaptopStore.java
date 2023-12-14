@@ -8,16 +8,15 @@ import java.util.Set;
 public class LaptopStore {
     private Set<Laptop> laptops;
 
-    // Constructor
     public LaptopStore() {
         laptops = new HashSet<>();
-        // Add a few laptops for example
+        
         laptops.add(new Laptop("Dell XPS", 16, 512, "Windows 10", "black"));
         laptops.add(new Laptop("MacBook Pro", 8, 256, "macOS", "gray"));
         laptops.add(new Laptop("Lenovo ThinkPad", 32, 1_000, "Windows 11", "silver"));
     }
 
-    // Method to filter laptops based on criteria
+    
     public Set<Laptop> filterLaptops(Map<String, Object> criteria) {
         Set<Laptop> result = new HashSet<>(laptops);
 
@@ -59,7 +58,7 @@ public class LaptopStore {
             System.out.println("5. Finish filtering");
     
             int choice = scanner.nextInt();
-            scanner.nextLine(); // consume the newline
+            scanner.nextLine();
     
             if (choice == 5) {
                 break;
@@ -91,7 +90,6 @@ public class LaptopStore {
             }
         }
     
-        // Filter laptops and print the result
         Set<Laptop> filteredResult = store.filterLaptops(criteria);
     
         System.out.println("Filtered Laptops:");
@@ -99,7 +97,6 @@ public class LaptopStore {
             System.out.println(laptop);
         }
     
-        // Close the scanner
         scanner.close();
     }
 }
